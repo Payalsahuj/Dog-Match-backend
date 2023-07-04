@@ -28,6 +28,30 @@ dogRouter.post("/addlosserdata",async(req,res)=>{
     }
     })
 
+
+
+
+
+
+
+    dogRouter.get("/addwinnerdata",async(req,res)=>{
+        try{
+            const dog=await dogModel.find()
+            res.send(dog)
+        }catch(err){
+            res.json({error:err.message})
+        }
+    })
+        
+    dogRouter.get("/addlosserdata",async(req,res)=>{
+        try{
+            const dog=await dogModel.find()
+            res.send(dog)
+        }catch(err){
+            res.json({error:err.message})
+        }  
+    })
+
 module.exports={
     dogRouter
 }
