@@ -11,7 +11,7 @@ const {image,time}=req.body
 try{
     const data=new dogModel(req.body)
     await data.save()
-    res.json({msg:"new data added",dog:req.body})
+    res.json({msg:"new data added",dogwin:req.body})
 }catch(err){
     res.json({error:err.message})
 }

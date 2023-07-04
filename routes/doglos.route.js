@@ -12,7 +12,7 @@ dogloRouter.post("/addlosserdata",async(req,res)=>{
     try{
         const data=new dogloseModel(req.body)
         await data.save()
-        res.json({msg:"new data added",dog:req.body})
+        res.json({msg:"new data added",dogloose:req.body})
     }catch(err){
         res.json({error:err.message})
     }
