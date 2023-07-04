@@ -10,12 +10,13 @@ const {userRouter}=require("./routes/user.route")
 
 
 const { auth } = require('./middleware/auth.middleware')
+const { dogRouter } = require('./routes/dog.route')
 
 
 app.use("/users",userRouter)
+app.use("/dog",dogRouter)
 
 
-app.use(auth)
 
 
 
